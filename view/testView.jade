@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+    head
+        title= pageTitle
+        meta(name="viewport", content="width=device-width, initial-scale=1.0", charset:'utf-8')
+        script(type='text/javascript', src='js/lib/jquery-1.11.1.js')
+        script(type='text/javascript', src='js/lib/bootstrap.js')
+        script(type='text/javascript', src='js/lib/underscore.js')
+        script(type='text/javascript', src='js/lib/backbone.js')
+    body
+        h1 Jade - node template engine '#{foo}'
+        //#container.col
+        //if youAreUsingJade
+        //  p You are amazing
+        //else
+        //  p Get on it!
+        p.
+            Jade is a terse and simple
+            templating language with a
+            strong focus on performance
+            and powerful features.
+        div(id='my', data-start='1990-1-1').
+            jlasjdlkasjdljadsjla
+    script(type='text/javascript', src='js/test.js')
