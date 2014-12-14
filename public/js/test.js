@@ -25,27 +25,31 @@ TestAppView = Backbone.View.extend({
     },
     initialize:function(){
 //        this.$el.con
-        var modela = new TestModel({id:1})
-        var modelb = new TestModel({id:2,alert:'明天'});
-        var modelc = new TestModel({id:3,alert:'后天'});
-        testCollection.add(modela);
-        testCollection.add(modelb);
-        testCollection.add(modelc);
-//        alert('t');
+//        var modela = new TestModel({id:1})
+//        var modelb = new TestModel({id:2,alert:'明天'});
+//        var modelc = new TestModel({id:3,alert:'后天'});
+//        testCollection.add(modela);
+//        testCollection.add(modelb);
+//        testCollection.add(modelc);
+////        alert('t');
         this.testItemView = {};
         var that = this;
         testCollection.each(function(value,key,list){
-            console.log(value)
-            console.log(key)
-            console.log(value === modela)
-            that.testItemView[value.id] = new TestItemView({model:value})
+//            console.log(value)
+//            console.log(key)
+//            console.log(value === modela)
+//            that.testItemView[value.id] = new TestItemView({model:value})
         });
     },
-    test:function(event){
+    test:function(event,i){
+        console.log('event')
+        console.log(event)
+        console.log('i')
+        console.log(i)
 //        window.document.oncontextmenu = function(){ return false;}
-        console.log(event.target)
-        console.log($(event.target).data('start'))
-        window.location.href = '#'+event.target.id
+//        console.log(event.target)
+//        console.log($(event.target).data('start'))
+//        window.location.href = '#'+event.target.id
 //        alert(event)
 //        alert(a)
 //        alert(c)
