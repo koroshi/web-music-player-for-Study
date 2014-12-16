@@ -21,7 +21,7 @@ exports.scan = (dir, depth, done) ->
            if depth is -1
              ndepth = 0
             else
-              ndepth = if (depth > 1) then (depth - 1) else 1
+              ndepth = if (depth > 1) then (depth ) else 1
 #            console.log depth
 #            console.log ndepth
 #            console.log 'nd'
