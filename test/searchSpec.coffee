@@ -80,4 +80,12 @@ describe "Search", ()->
           ".test_files/dir2/dir3/dir4/4",
         ]
         done();
+  describe "#match()", ()->
+    it "should find and return matches based on a query", ()->
+      files = ["hello.txt","world.js","another.js"]
+      results = search.match ".js", files
+      expect(results).to.deep.equal ["world.js", "another.js"]
+
+      results = search.match "hello", files
+      expect(results).to.deep.equal ["hello.txt"]
 

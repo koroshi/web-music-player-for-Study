@@ -18,10 +18,10 @@ exports.scan = (dir, depth, done) ->
       fs.stat file, (err, stat) ->
         if stat and stat.isDirectory()
           if depth isnt 0
-           if depth is -1
-             ndepth = 0
+            if depth is -1
+              ndepth = 0
             else
-              ndepth = if (depth > 1) then (depth ) else 1
+              ndepth = if depth > 1 then depth  else 1
 #            console.log depth
 #            console.log ndepth
 #            console.log 'nd'
@@ -40,3 +40,9 @@ exports.scan = (dir, depth, done) ->
     next()
 #exports.scan "../.test_files", 2 ,(err,flist)->
 #  console.log(flist)
+exports.match = (query, files)->
+  matches = [];
+  for each in files
+    if each.indexOf(query) isnt -1
+      matches.push(each)
+  matches
