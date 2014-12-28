@@ -17,6 +17,8 @@ console.log 'c'
 app.get '/', (req,res) ->
 #  res.send('hello world');
   foo =5
+  console.log  req.headers['user-agent']
+  #  console.log req.headers.user-agent
   res.render('testView',{foo:foo})
   console.log 's'
 
